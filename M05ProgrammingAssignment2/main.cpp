@@ -272,9 +272,16 @@ void addInvoice(sqlite3 * db)
             
         }
         printf("Your total is %g\n", totals[TOTALKEY]);
+        printf("[");
         for (itr = totals.begin(); itr != totals.end(); itr++) {
-            printf("[%s: %g]", itr->first.c_str(), itr->second);
+            if (itr->first.c_str() == TOTALKEY) {
+                printf("\"%s\": %g", itr->first.c_str(), itr->second);
+            } else {
+                printf("\"%s\": %g, ", itr->first.c_str(), itr->second);
+            }
+
         }
+        printf("]");
         cout << endl;
         string transaction = "BEGIN TRANSACTION;"\
         "   INSERT INTO INVOICE VALUES(1009," + to_string(selectedCustomer.cus_num)  + ",12-Jan-22)"\
