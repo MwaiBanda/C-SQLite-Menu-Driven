@@ -55,7 +55,6 @@ int main()
     
     int rc;
     
-    //Need to add code to open the database.
     rc = sqlite3_open("/Users/mwaibanda/Repository/Main Projects/Command Line Projects/M05ProgrammingAssignment2/M05ProgrammingAssignment2/SaleCo.db", &mydb);
     
     if( rc ) {
