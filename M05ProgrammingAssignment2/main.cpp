@@ -208,7 +208,7 @@ void viewInvoice(sqlite3 * db)
 void addInvoice(sqlite3 * db)
 {
     
-    /* Take the program and add a menu option for adding an invoice.  This should call a function that sets up to run a transaction that will insert everything needed for the invoice.  You should start by asking which customer the invoice is for by using a printed menu.  Next you will need to find out which products will be on the invoice and the quantities (these make up the line records in the database). You should again use printed menus to gather this information.  Once the user has entered all the information You will need to insert the invoice record and the line records, update the customer balance, and update the product quantity on hand using a transaction sent to the database.*/
+    /*This should call a function that sets up to run a transaction that will insert everything needed for the invoice.  You should start by asking which customer the invoice is for by using a printed menu.  Next you will need to find out which products will be on the invoice and the quantities (these make up the line records in the database). You should again use printed menus to gather this information.  Once the user has entered all the information You will need to insert the invoice record and the line records, update the customer balance, and update the product quantity on hand using a transaction sent to the database.*/
     string query = "SELECT * FROM CUSTOMER", errorMsg;
   
 
